@@ -1,0 +1,145 @@
+/*ESTILO GERAL*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    background-color: black;
+    height: 100vh;
+}
+
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+}
+
+.btn-contato button{
+    padding: 10px 30px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: rgb(194, 85, 103);
+    border:0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+/* ESTILO DO CABEÇALHO */
+header{
+    padding: 40px 4%;
+     margin: 0;
+}
+
+header > .interface{
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+
+header a{
+    color: rgb(129, 129, 129);
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+
+header a:hover{
+    color:white;
+    transform: scale(1.05);
+}
+
+header nav ul{
+    list-style-type: none;
+    
+}
+
+header nav ul li{
+    display: inline-block;
+    padding: 0 40px;
+    
+}
+
+
+.btn-contato button:hover{
+    box-shadow: 0px 0px 8px rgb(194, 85, 103);
+    transform: scale(1.05);
+    
+}
+
+/* ESTILO DO TOPO DO SITE */
+section.topo-do-site{
+    padding: 40px 4%;
+}
+
+section.topo-do-site.flex{
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+.topo-do-site h1{
+    color: white;
+    font-size: 38px;
+    line-height: 40px;
+}
+
+.topo-do-site .txt-topo-do-site h1 span{
+    color: rgb(194, 98, 112);
+}
+
+.topo-do-site  p{
+    color:white;
+    margin: 40px 0;
+}
+
+.img-topo-site {
+  max-width: 420px;   /* largura máxima do bloco da imagem */
+  width: 45%;         /* ocupa até 45% do flex container (ajusta conforme layout) */
+  box-sizing: border-box;
+}
+
+.img-topo-site img {
+  width: 100%;        /* respeita o max-width do container */
+  max-width: 100%;
+  height: auto;       /* mantém proporção */
+  display: block;
+  object-fit: cover;  /* útil se fixar altura depois */
+  border-radius: 8px; /* opcional */
+}
+
+/* Se estiver usando display:flex no .flex, garante alinhamento */
+.flex {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  flex-wrap: wrap; /* evita que quebre mal em telas pequenas */
+}
+
+/* pequenas responsividades */
+@media (max-width: 800px) {
+  .img-topo-site { width: 100%; max-width: 360px; margin: 0 auto; }
+  .txt-topo-site { width: 100%; text-align: center; }
+
+}
+
+.topo-do-site .img-topo-site img{
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+@keyframes flutuar{
+    0%{
+        top:0;
+    }
+
+    100%{
+        top:30px
+    }
+}

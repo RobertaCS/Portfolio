@@ -5,60 +5,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="portfolio.css">
+    <!--GOOGLE FONTES-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!--FIM DO GOOGLE FONTES-->
+
 </head>
 <body>
   <!-- Tela de carregamento -->
   <div id="loading">
-    <div class="container">
-      <div class="text">
-        <h1>Loading</h1>
-      </div>
-      <div class="loading">
-        <div class="line-box">
-          <div class="line"></div>
-        </div>
+  <div class="container">
+    <div class="text">
+      <h1>Loading...</h1>
+    </div>
+    <div class="loading">
+      <div class="line-box">
+        <div class="line"></div>
       </div>
     </div>
   </div>
+</div>
 
   <!-- Conteúdo do Portfólio -->
   <div id="portfolio" style="display:none;">
     <header>
-        <a href="#" class="logo">Roberta</a>
+        
 
-        <nav>
-            <a href="#" class="active">Home</a>
-            <a href="#">Services</a>
-            <a href="#">Skills</a>
-            <a href="#">Education</a>
-            <a href="#">Experience</a>
-            <a href="#">Contact</a>
+        <nav class="menu-desktop">
+          <ul>
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Sobre mim</a></li>
+            <li><a href="#">Meus Projetos</a></li>
+            <li><a href="#">Habilidades</a></li>
+            <li><a href="#">Contatos</a></li>
+          </ul>
         </nav>
+
+        <div class="btn-contato">
+          <a href="#">
+            <button>Contato</button>
+          </a>
+
+        </div><!--bnt-contato-->
+        </div><!--interface-->
     
     </header>
-    <section class="home">
-        <div class="home-img">
-            <img src="Imagens/WhatsApp Image 2025-09-22 at 21.08.42.jpeg" alt="">
-        </div>
-        <div class="home-content">
-            <h1>Olá,aqui é a <span>Roberta</span></h1>
-            <h3 class="typing-text">Im a <span></span></h3>
-            <p>aqui vai ficar escrito alguma coisa</p>
-            <div class="social-icons">
-                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="#"><i class="fa-brands fa-github"></i></a>
-                <a href="#"><i class="fa-brands fa-email"></i></a>
-            </div>
-        </div>
-    </section>
-  </div>
 
-  <script>
-    // tempo do loading = 3 segundos (3000 ms)
-    setTimeout(() => {
-      document.getElementById("loading").style.display = "none";
-      document.getElementById("portfolio").style.display = "block";
-    },3000);
-  </script>
+    <main>
+      <section class="topo-do-site">
+        <div class="interface">
+          <div class="flex">
+            <div class="txt-topo-site">
+              <h1>Olá,mundo! Muito prazer, sou a Roberta<span>.</span></h1>
+              <P>aqui vai ficar uma mini apresentação pessoal falando principal atuação, formação e etc.</P>
+
+              <div class="btn-contato">
+                <a href="#">
+                  <button>Entre em Contato</button>
+                </a>
+    
+              </div>
+
+            </div><!--txt-topo-site-->
+
+            <div class="img-topo-site">
+              <img src="Imagens/animação pessoal.png" alt="">
+            </div>
+          </div>
+        </div><!--interface-->
+      </section><!--topo-do-site-->
+    </main>
+   
+
+ <script>
+  // bloqueia scroll e anima barra
+  document.body.classList.add('loading-locked');
+  const line = document.querySelector('#loading .line');
+
+  // inicia animação da barra (vai de 0% a 100% em 1900ms)
+  // usa setTimeout 0 pra forçar reflow e garantir a animação
+  setTimeout(() => {
+    line.style.width = '100%';
+  }, 0);
+
+  // tempo total do loading = 2000 ms
+  setTimeout(() => {
+    document.getElementById("loading").style.display = "none";
+    document.getElementById("portfolio").style.display = "block";
+    // libera o scroll
+    document.body.classList.remove('loading-locked');
+  }, 2000);
+</script>
 </body>
 </html>
