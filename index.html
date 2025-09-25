@@ -17,12 +17,10 @@
 
 </head>
 <body>
-  <!-- Tela de carregamento -->
-  <div id="loading">
-  <div class="container">
-    <div class="text">
-      <h1>Loading...</h1>
-    </div>
+<!-- Tela de carregamento -->
+<div id="loading">
+  <div class="loading-container">
+    <h1 class="text">Loading...</h1>
     <div class="loading">
       <div class="line-box">
         <div class="line"></div>
@@ -30,6 +28,7 @@
     </div>
   </div>
 </div>
+
 
   <!-- Conteúdo do Portfólio -->
   <div id="portfolio" style="display:none;">
@@ -46,13 +45,7 @@
           </ul>
         </nav>
 
-        <div class="btn-contato">
-          <a href="#">
-            <button>Contato</button>
-          </a>
-
-        </div><!--bnt-contato-->
-        </div><!--interface-->
+    
     
     </header>
 
@@ -82,7 +75,7 @@
 
       <section class="especialidades">
         <div class="interface">
-          <h2>MINHAS<span>ESPECIALIDADES.</span></h2>
+          <h2 class="titulo">MINHAS <span>ESPECIALIDADES.</span></h2>
           <div class="flex">
             <div class="especialidades-box">
               <i class="bi bi-filetype-html"></i>
@@ -110,6 +103,30 @@
           </div><!--flex-->
         </div><!--interface-->
       </section><!--especialidades-->
+
+      <section class="projetos">
+        <div class="interface">
+          <h2 class="titulo">MEUS <span>PROJETOS.</span></h2>
+          <div class="flex">
+            <div class="img-port"></div>
+            <div class="img-port"></div>
+            <div class="img-port"></div>
+          </div><!--flex-->
+        </div><!--interface-->
+      </section><!--projetos-->
+
+      <section class="formulario">
+        <div class="interface">
+          <h2 class="titulo">FALE <span>COMIGO.</span></h2>
+
+          <form action="">
+            <input type="text" name="" id="" placeholder="Seu nome completo:" required>
+            <input type="text" name="" id="" placeholder="Seu email:" required>
+            <textarea name="" id="" placeholder="Sua mensagem" required></textarea>
+            <div class="btn-enviar"><input type="submit" value="ENVIAR"></div>
+          </form>
+        </div><!--interface-->
+      </section><!--formulario-->
     </main>
    
 

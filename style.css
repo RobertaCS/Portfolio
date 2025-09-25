@@ -1,87 +1,63 @@
-body{
-    background: lightgrey;
-    font-family:Arial, Helvetica, sans-serif;
+body {
+  background: lightgrey;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.container{
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.loading-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.text{
-    color: rgb(199, 99, 116);
-    margin-bottom: 25px;
-    font-size: 20px;
-    letter-spacing: 2px;
+.text {
+  color: rgb(199, 99, 116);
+  margin-bottom: 25px;
+  font-size: 20px;
+  letter-spacing: 2px;
 }
 
 /* --- Loading overlay full-screen --- */
 #loading {
   position: fixed;     /* importante: fixa na viewport */
   inset: 0;            /* top/right/bottom/left: 0 */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  background: #b6b4b4; /* ou o fundo que quiser */
-  z-index: 9999;       /* na frente de tudo */
-}
-
-/* Container visual do loading */
-#loading .container {
-  width: 90%;
-  max-width: 520px;
-  padding: 20px;
-  box-sizing: border-box;
-  text-align: center;
-}
-
-/* Texto */
-#loading .text h1 {
-  margin: 0 0 12px;
-  font-size: 20px;
-  font-weight: 600;
-  font-family: 'Poppins', sans-serif;
+  display: grid;
+  place-items: center;
+  background: #f9f9f9; /* fundo */
+  z-index: 9999;   
+  transition: opacity .3s; 
 }
 
 /* Barra de carregamento (caixa) */
-#loading .line-box {
-  width: 100%;
-  max-width: 400px;   /* limite da largura da barra */
-  height: 14px;       /* deixa mais grossa */
-  margin: 0 auto;     /* centraliza */
-  background: #ccc;   /* cinza mais forte pra aparecer */
-  border-radius: 8px;
-  overflow: hidden;
+.line-box {
+    width:300px;       /* define largura fixa */
+    height: 20px;       /* define altura visível */
+    background: #000;   /* fundo da caixa */
+    border-radius: 8px;
+    overflow: hidden;
   box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
 }
 
-#loading .line {
-  width: 0%;
+.line {
   height: 100%;
-  background: linear-gradient(90deg, #4CAF50, #81C784); /* verde bem visível */
+  width: 0%;
+  background: linear-gradient(90deg, #e3268b, #c781b9);
   border-radius: 8px;
-  transition: width 2s linear;
+  animation: loading 3s linear infinite alternate;
 }
+
 
 /* --- Evita que a página role enquanto loading estiver ativo --- */
 body.loading-locked {
   overflow: hidden;
-    
 }
 
-@keyframes loading{
-    0%{
-        width: 0%;
-    }
-
-     100%{
-        width: 100%;
-    }
-
+@keyframes loading {
+  from { width: 0%; }
+  to { width: 100%; }
 }
+
+
 
