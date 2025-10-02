@@ -1,280 +1,238 @@
-/*ESTILO GERAL*/
+/* ESTILO GERAL */
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-}
-
-body{
-    background-color: black;
-    height: 100vh;
-}
-
-.interface{
-    max-width: 1280px;
-    margin: 0 auto;
-}
-
-.menu-desktop ul {
-    list-style: none;         /* remove bolinhas */
-    margin: 0;
-    padding: 0;
-    display: flex;            /* deixa em linha */
-    justify-content: center;  /* centraliza no eixo horizontal */
-    gap: 30px;                /* espaço entre itens */
+    margin:0; padding:0; box-sizing:border-box;
+    font-family:"Poppins", sans-serif;
+  }
+  body{ background:#e286867d; min-height:100vh; }
+  .interface{ max-width:1280px; margin:0 auto; }
+  
+  /* MENU */
+  .menu-desktop ul{
+    list-style:none; display:flex; justify-content:center; gap:30px;
+  }
+  .menu-desktop li a{
+    text-decoration:none;
+    color:#ffffff;
+    font-weight:700;
+    display:inline-block;     /* importante para funcionar o scale */
+    transition: transform .2s ease, color .2s ease;
   }
   
-  .menu-desktop li a {
-    text-decoration: none;
-    color: #a7a4a4;
-    font-weight: bold;
-    transition: color 0.2s;
+  .menu-desktop li a:hover{
+    color:#c5629f;
+    transform: scale(1.1);    /* zoom leve */
   }
   
-  .menu-desktop li a:hover {
-    color: #c5629f;           /* cor no hover */
+  
+  /* FLEX BASE */
+  .flex{ display:flex; gap:24px; align-items:center; flex-wrap:wrap; }
+  
+  /* BOTÃO */
+  .btn-contato button{
+    padding:10px 30px; font-size:18px; font-weight:600;
+    background:#c25567; border:0; border-radius:30px; cursor:pointer; transition:.2s;
+  }
+  .btn-contato button:hover{ box-shadow:0 0 8px #c25567; transform:scale(1.05); }
+  
+  /* TÍTULOS */
+  h2.titulo{ color:#fffcfc; font-size:38px; text-align:center; }
+  h2.titulo span{ color:#c25567; }
+  
+  /* HEADER */
+  header{ padding:40px 4%; }
+  
+  /* TOPO */
+
+  .topo-do-site h1 {
+    color:#fff; 
+    font-size:38px; 
+    line-height:40px;
+    transition: transform .3s ease;
   }
   
-
-.flex{
-    display: flex;
-}
-
-.btn-contato button{
-    padding: 10px 30px;
-    font-size: 18px;
-    font-weight: 600;
-    background-color: rgb(194, 85, 103);
-    border:0;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: .2s;
-}
-
-h2.titulo{
-    color:rgb(231, 227, 227);
-    font-size: 38px;
-    text-align: center;
-    
-}
-
-h2.titulo span{
-    color:rgb(194, 66, 87);
-    text-align: center;
-
-}
-
-/* ESTILO DO CABEÇALHO */
-header{
-    padding: 40px 4%;
-     margin: 0;
-}
-
-header > .interface{
-display: flex;
-align-items: center;
-justify-content: space-between;
-}
-
-
-header a{
-    color: rgb(129, 129, 129);
-    text-decoration: none;
-    display: inline-block;
-    transition: .2s;
-}
-
-header a:hover{
-    color:white;
-    transform: scale(1.05);
-}
-
-header nav ul{
-    list-style-type: none;
-    
-}
-
-header nav ul li{
-    display: inline-block;
-    padding: 0 40px;
-    
-}
-
-
-.btn-contato button:hover{
-    box-shadow: 0px 0px 8px rgb(194, 85, 103);
-    transform: scale(1.05);
-    
-}
-
-/* ESTILO DO TOPO DO SITE */
-section.topo-do-site{
-    padding: 40px 4%;
-}
-
-section.topo-do-site.flex{
-    align-items: center;
-    justify-content: center;
-    gap: 90px;
-}
-
-.topo-do-site h1{
-    color: white;
-    font-size: 38px;
-    line-height: 40px;
-}
-
-.topo-do-site .txt-topo-do-site h1 span{
-    color: rgb(194, 98, 112);
-}
-
-.topo-do-site  p{
-    color:white;
-    margin: 40px 0;
-}
-
-.img-topo-site {
-  max-width: 420px;   /* largura máxima do bloco da imagem */
-  width: 45%;         /* ocupa até 45% do flex container (ajusta conforme layout) */
-  box-sizing: border-box;
-}
-
-.img-topo-site img {
-  width: 100%;        /* respeita o max-width do container */
-  max-width: 100%;
-  height: auto;       /* mantém proporção */
-  display: block;
-  object-fit: cover;  /* útil se fixar altura depois */
-  border-radius: 8px; /* opcional */
-}
-
-/* Se estiver usando display:flex no .flex, garante alinhamento */
-.flex {
-  display: flex;
-  gap: 24px;
-  align-items: center;
-  flex-wrap: wrap; /* evita que quebre mal em telas pequenas */
-}
-
-/* pequenas responsividades */
-@media (max-width: 800px) {
-  .img-topo-site { width: 100%; max-width: 360px; margin: 0 auto; }
-  .txt-topo-site { width: 100%; text-align: center; }
-
-}
-
-.topo-do-site .img-topo-site img{
+  .topo-do-site h1:hover {
+    transform: scale(1.03);
+  }
+  
+  section.topo-do-site{ padding:40px 4%; margin-bottom:100px; }
+  .txt-topo-site h1 span{ color:#c25567; }
+  .topo-do-site p{ color:#fff; margin:40px 0; }
+  
+  .img-topo-site{ max-width:420px; width:45%; }
+  .img-topo-site img{
+    width:100%; display:block; border-radius:8px; object-fit:cover;
+    position:relative; animation:flutuar 2s ease-in-out infinite alternate;
+  }
+  @keyframes flutuar{ 0%{top:0} 100%{top:30px} }
+  
+  @media (max-width:800px){
+    .img-topo-site{ width:100%; max-width:360px; margin:0 auto; }
+    .txt-topo-site{ width:100%; text-align:center; }
+  }
+  
+  /* ---------- MINHAS HABILIDADES ---------- */
+  section.especialidades{ padding:60px 4%; margin-bottom:120px; }
+  .especialidades-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+    gap:32px;
+    margin-top:32px;
+  }
+  .especialidades-box{
+    color:#fff; padding:32px; border-radius:20px;
+    border:2px solid #fff; text-align:center; transition:.2s;
+    background:#7c7272bf;
+  }
+  .especialidades-box:hover{
+    transform:scale(1.05); box-shadow:0 0 28px rgba(255,255,255,.44);
+  }
+  .especialidades-box i{ font-size:70px; color:#c25567; }
+  .especialidades-box h3{ font-size:24px; margin:12px 0; }
+  
+  /* ---------- MEUS PROJETOS ---------- */
+  section.projetos {
     position: relative;
-    animation: flutuar 2s ease-in-out infinite alternate;
-}
-@keyframes flutuar{
-    0%{
-        top:0;
-    }
-
-    100%{
-        top:30px
-    }
-}
-
-/* ESTILO DAS ESPECIALIDADES */
-section.especialidades{
-    padding:40px 4%;
-}
-
-section.especialidades .flex{
-    gap:60px;
-}
-
-.especialidades .especialidades-box{
-    color: white;
-    padding: 40px;
-    border-radius: 20px;
-    border: 2px solid white;
-    margin-top: 45px;
-    transition: .2s;
-
-}
-
-.especialidades .especialidades-box:hover{
+    padding: 80px 4%;
+    margin-bottom: 120px;
+  }
+  
+  /* linha superior brilhante */
+  section.projetos::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #ffffff, #ff3c6d, #ffffff);
+    box-shadow: 0 0 15px rgba(255, 100, 130, 0.8);
+  }
+  
+  /* linha inferior brilhante */
+  section.projetos::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #ffffff, #ff3c6d, #ffffff);
+    box-shadow: 0 0 15px rgba(255, 100, 130, 0.8);
+  }
+  
+  /* Grid dos projetos */
+.projetos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 32px;
+    margin-top: 32px;
+  }
+  
+  /* Caixa do projeto */
+  .img-port {
+    background: #c26775;
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Imagem com mesmo tamanho */
+  .img-port img {
+    width: 100%;
+    height: 180px;         /* força mesma altura */
+    object-fit: cover;     /* corta para preencher */
+    border-radius: 8px;
+    transition: transform .3s ease;
+  }
+  
+  .img-port img:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 28px rgba(255, 255, 255, 0.44);
-}
-
-.especialidades .especialidades-box i{
-    font-size: 70px;
-    color: rgb(194, 98, 112);
-}
-
-.especialidades .especialidades-box h3{
-    font-size:28px ;
-    margin: 15px 0;
-}
-
-/* ESTILO DOS PROJETOS */
-section.projetos{
+  }
+  
+  /* Título */
+  .legenda-projeto {
+    margin-top: 12px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+  }
+  
+  /* Subtítulo */
+  .sublegenda-projeto {
+    margin-top: 4px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #e0e0e0;
+  }
+  
+  
+/* ---------- FORMULÁRIO ---------- */
+section.formulario {
     padding: 80px 4%;
-    box-shadow:0 0 40px 10px rgba(255, 255, 255, 0.336) ;
-}
-
-section.projetos.flex{
-    justify-content: space-around;
-}
-
-.img-port{
-    width: 360px;
-    height: 460px;
-    background-color: rgb(194, 103, 118);
-}
-
-/* ESTILO DO FORMULARIO DE CONTATO */
-section.formulario{
-    padding: 80px 4%;
-}
-
-form{
+    margin-bottom: 120px;
+  }
+  
+  form {
     max-width: 500px;
     margin: 0 auto;
     display: flex;
-    justify-content: center;
     flex-direction: column;
-    gap: 10px;
-}
-
-form input,form textarea{
+    gap: 12px;
+  }
+  
+  form input,
+  form textarea {
     width: 100%;
-    background-color: rgba(22, 21, 21, 0.48);
-    border: 0;
+    background: #fff;          /* fundo branco */
+    border: 1px solid #d9a3a9; /* borda rosada suave */
     outline: 0;
     padding: 20px 15px;
     border-radius: 15px;
-    color: white;
+    color: #333;               /* texto escuro para contraste */
     font-size: 18px;
-}
-
-form textarea{
+  }
+  
+  /* Placeholders mais escuros */
+  form input::placeholder,
+  form textarea::placeholder {
+    color: #777;   /* cinza médio, legível */
+    opacity: 1;
+  }
+  
+  form textarea {
     resize: none;
     max-height: 200px;
-}
-
-form.btn-enviar{
+  }
+  
+  .btn-enviar {
     margin-top: 20px;
     text-align: center;
-}
-
-form .btn-enviar input{
-    width: 120px;
-    background-color: rgb(194, 115, 128);
-    color: white;
+  }
+  
+  .btn-enviar input {
+    width: 140px;
+    background: #c27380;
+    color: #fff;
     font-weight: 700;
     cursor: pointer;
-    transition: transform 0.2s ease;
-    background: 0.2s ease;
-    
-}
+    border: none;
+    border-radius: 12px;
+    padding: 12px;
+    transition: transform 0.2s, background 0.2s;
+  }
+  
+  .btn-enviar input:hover {
+    transform: scale(1.05);
+    background: #a94c5a; /* tom mais escuro no hover */
+  }
+  
+  
 
-form .btn-enviar input:hover{
-        transform: scale(1.05);   /* leve zoom */
-        background: #45a049;
-}
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  

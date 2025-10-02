@@ -1,153 +1,177 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="portfolio.css">
-    <!--GOOGLE FONTES-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <!--FIM DO GOOGLE FONTES-->
-    <!--BOOTSTRAP ICONS-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-     <!--FIM BOOTSTRAP ICONS-->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfólio</title>
 
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="portfolio.css" />
+
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- BOOTSTRAP ICONS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+  <style>
+    html {
+      scroll-behavior: smooth; /* Rolagem suave */
+    }
+  </style>
 </head>
 <body>
-<!-- Tela de carregamento -->
-<div id="loading">
-  <div class="loading-container">
-    <h1 class="text">Loading...</h1>
-    <div class="loading">
-      <div class="line-box">
-        <div class="line"></div>
+
+  <!-- Loading -->
+  <div id="loading">
+    <div class="loading-container">
+      <h1 class="text">Loading...</h1>
+      <div class="loading">
+        <div class="line-box">
+          <div class="line"></div>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-
-  <!-- Conteúdo do Portfólio -->
+  <!-- Conteúdo -->
   <div id="portfolio" style="display:none;">
     <header>
-        
-
-        <nav class="menu-desktop">
-          <ul>
-            <li><a href="#">Início</a></li>
-            <li><a href="#">Sobre mim</a></li>
-            <li><a href="#">Meus Projetos</a></li>
-            <li><a href="#">Habilidades</a></li>
-            <li><a href="#">Contatos</a></li>
-          </ul>
-        </nav>
-
-    
-    
+      <nav class="menu-desktop">
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#sobre">Sobre mim</a></li>
+          <li><a href="#projetos">Meus Projetos</a></li>
+          <li><a href="#habilidades">Habilidades</a></li>
+          <li><a href="#contatos">Contatos</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main>
-      <section class="topo-do-site">
+      <!-- Topo -->
+      <section id="inicio" class="topo-do-site">
         <div class="interface">
           <div class="flex">
             <div class="txt-topo-site">
-              <h1>Olá,mundo! Muito prazer, sou a Roberta<span>.</span></h1>
-              <P>aqui vai ficar uma mini apresentação pessoal falando principal atuação, formação e etc.</P>
+              <h1>Olá, mundo! Muito prazer, sou a Roberta<span>.</span></h1>
+              <p>aqui vai ficar uma mini apresentação pessoal falando principal atuação, formação e etc.</p>
 
               <div class="btn-contato">
-                <a href="#">
-                  <button>Entre em Contato</button>
-                </a>
-    
+                <a href="#contatos"><button>Entre em Contato</button></a>
               </div>
-
-            </div><!--txt-topo-site-->
+            </div>
 
             <div class="img-topo-site">
               <img src="Imagens/animação pessoal.png" alt="">
             </div>
           </div>
-        </div><!--interface-->
-      </section><!--topo-do-site-->
+        </div>
+      </section>
 
-      <section class="especialidades">
+      <!-- Minhas Habilidades -->
+      <section id="habilidades" class="especialidades">
         <div class="interface">
           <h2 class="titulo">MINHAS <span>ESPECIALIDADES.</span></h2>
-          <div class="flex">
+
+          <!-- Itens lado a lado -->
+          <div class="especialidades-grid">
             <div class="especialidades-box">
               <i class="bi bi-filetype-html"></i>
               <h3>HTML</h3>
               <p>aqui vai ficar um mini textinho</p>
-            </div><!--especialidades-box-->
+            </div>
 
-            <div class="interface">
-              <div class="flex">
-                <div class="especialidades-box">
-                  <i class="bi bi-css"></i>
-                  <h3>CSS</h3>
-                  <p>aqui vai ficar um mini textinho</p>
-                </div><!--especialidades-box-->
+            <div class="especialidades-box">
+              <i class="bi bi-css"></i>
+              <h3>CSS</h3>
+              <p>aqui vai ficar um mini textinho</p>
+            </div>
 
+            <div class="especialidades-box">
+              <i class="bi bi-filetype-js"></i>
+              <h3>JAVASCRIPT</h3>
+              <p>aqui vai ficar um mini textinho</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-                <div class="interface">
-                  <div class="flex">
-                    <div class="especialidades-box">
-                      <i class="bi bi-filetype-js"></i>
-                      <h3>JAVASCRIPT</h3>
-                      <p>aqui vai ficar um mini textinho</p>
-                    </div><!--especialidades-box-->
-
-          </div><!--flex-->
-        </div><!--interface-->
-      </section><!--especialidades-->
-
-      <section class="projetos">
+      <!-- Meus Projetos -->
+      <section id="projetos" class="projetos">
         <div class="interface">
           <h2 class="titulo">MEUS <span>PROJETOS.</span></h2>
-          <div class="flex">
-            <div class="img-port"></div>
-            <div class="img-port"></div>
-            <div class="img-port"></div>
-          </div><!--flex-->
-        </div><!--interface-->
-      </section><!--projetos-->
 
-      <section class="formulario">
+          <!-- Cards lado a lado -->
+          <div class="projetos-grid">
+
+            <!-- Projeto 1 -->
+            <div class="img-port">
+              <a href="https://robertacs.github.io/Jogo-da-memoria/" target="_blank">
+                <img src="Imagens/imagem-jogodamemoria.jpeg" alt="Projeto 1">
+              </a>
+              <p class="legenda-projeto">Jogo da Memória</p>
+              <p class="sublegenda-projeto">HTML · CSS · JavaScript</p>
+            </div>
+          
+            <!-- Projeto 2 -->
+            <div class="img-port">
+              <a href="https://robertacs.github.io/To-do---Minhas-tarefas/" target="_blank">
+                <img src="Imagens/to-do-list.jpeg" alt="Projeto 2">
+              </a>
+              <p class="legenda-projeto">To Do List - Organização</p>
+              <p class="sublegenda-projeto">HTML · CSS</p>
+            </div>
+          
+            <!-- Projeto 3 -->
+            <div class="img-port">
+              <a href="https://robertacs.github.io/literatura-em-movimento/" target="_blank">
+                <img src="Imagens/literatura.jpeg" alt="Projeto 3">
+              </a>
+              <p class="legenda-projeto">Blog Simples - Literatura em movimento</p>
+              <p class="sublegenda-projeto">HTML · CSS · JS</p>
+            </div>
+          
+          </div>
+        </div>
+      </section>
+
+      <!-- Formulário -->
+      <section id="contatos" class="formulario">
         <div class="interface">
           <h2 class="titulo">FALE <span>COMIGO.</span></h2>
 
-          <form action="">
-            <input type="text" name="" id="" placeholder="Seu nome completo:" required>
-            <input type="text" name="" id="" placeholder="Seu email:" required>
-            <textarea name="" id="" placeholder="Sua mensagem" required></textarea>
-            <div class="btn-enviar"><input type="submit" value="ENVIAR"></div>
+          <form action="https://formsubmit.co/rcavalcantisantos@gmail.com" method="POST">
+            <input type="text" name="nome" placeholder="Seu nome completo:" required>
+            <input type="email" name="email" placeholder="Seu email:" required>
+            <textarea name="mensagem" placeholder="Sua mensagem" required></textarea>
+            <div class="btn-enviar">
+              <input type="submit" value="ENVIAR">
+            </div>
+          
+            <!-- Configurações extras -->
+            <input type="hidden" name="_next" value="https://robertacs.github.io/Portfolio/">
+            <input type="hidden" name="_captcha" value="false">
           </form>
-        </div><!--interface-->
-      </section><!--formulario-->
+          
+      </section>
     </main>
-   
+  </div>
 
- <script>
-  // bloqueia scroll e anima barra
-  document.body.classList.add('loading-locked');
-  const line = document.querySelector('#loading .line');
-
-  // inicia animação da barra (vai de 0% a 100% em 1900ms)
-  // usa setTimeout 0 pra forçar reflow e garantir a animação
-  setTimeout(() => {
-    line.style.width = '100%';
-  }, 0);
-
-  // tempo total do loading = 2000 ms
-  setTimeout(() => {
-    document.getElementById("loading").style.display = "none";
-    document.getElementById("portfolio").style.display = "block";
-    // libera o scroll
-    document.body.classList.remove('loading-locked');
-  }, 2000);
-</script>
+  <!-- Script do Loading -->
+  <script>
+    document.body.classList.add('loading-locked');
+    const line = document.querySelector('#loading .line');
+    setTimeout(() => { line.style.width = '100%'; }, 0);
+    setTimeout(() => {
+      document.getElementById("loading").style.display = "none";
+      document.getElementById("portfolio").style.display = "block";
+      document.body.classList.remove('loading-locked');
+    }, 2000);
+  </script>
 </body>
 </html>
+
