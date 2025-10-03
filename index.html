@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portfólio</title>
+  <title>📄💗Portfólio</title>
 
   <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
@@ -57,8 +57,23 @@
         <div class="interface">
           <div class="flex">
             <div class="txt-topo-site">
-              <h1>Olá, mundo! Muito prazer, sou a Roberta<span>.</span></h1>
-              <p>aqui vai ficar uma mini apresentação pessoal falando principal atuação, formação e etc.</p>
+              <h1>
+  <span class="destaque">Olá, mundo!</span> Muito prazer, aqui é a Roberta<span>.</span>
+</h1>
+
+              <p>
+                Sou desenvolvedora front-end apaixonada pela criação de sites funcionais, modernos e bem estruturados 💻✨. 
+                Tenho foco em transformar ideias em experiências digitais, com atenção a cada detalhe do design 🎨 e da usabilidade ⚡. 
+              
+                Além da tecnologia, também sou entusiasta de jogos, animes, filmes e séries, 
+                que alimentam minha criatividade e trazem inspiração para meus projetos 🚀. 
+              
+                <br><br>
+                <strong>Formação Acadêmica 🎓</strong><br>
+                Atualmente estou cursando o 2º semestre de Análise e Desenvolvimento de Sistemas na Universidade de Mogi das Cruzes (UMC), em Mogi das Cruzes - SP, 
+                onde venho ampliando meus conhecimentos em desenvolvimento de software e práticas de programação 💡.
+              </p>
+              
 
               <div class="btn-contato">
                 <a href="#contatos"><button>Entre em Contato</button></a>
@@ -75,26 +90,30 @@
       <!-- Minhas Habilidades -->
       <section id="habilidades" class="especialidades">
         <div class="interface">
-          <h2 class="titulo">MINHAS <span>ESPECIALIDADES.</span></h2>
+          <h2 class="titulo">MINHAS <span>HABILIDADES.</span></h2>
 
           <!-- Itens lado a lado -->
           <div class="especialidades-grid">
             <div class="especialidades-box">
               <i class="bi bi-filetype-html"></i>
               <h3>HTML</h3>
-              <p>aqui vai ficar um mini textinho</p>
+              <p>O HTML (HyperText Markup Language) é uma linguagem de marcação utilizada 
+                para estruturar e organizar o conteúdo de páginas web. Diferente de linguagens de programação, 
+                o HTML não cria algoritmos ou manipula dados, mas define a estrutura de elementos como textos, imagens, links, 
+                tabelas e formulários que compõem uma página.</p>
             </div>
 
             <div class="especialidades-box">
               <i class="bi bi-css"></i>
               <h3>CSS</h3>
-              <p>aqui vai ficar um mini textinho</p>
+              <p>O CSS (Cascading Style Sheets) é uma linguagem de estilo que define a aparência de páginas web, como cores, fontes e layout. 
+                Ele separa o conteúdo da estrutura visual, facilitando a criação de sites elegantes e consistentes.</p>
             </div>
 
             <div class="especialidades-box">
               <i class="bi bi-filetype-js"></i>
               <h3>JAVASCRIPT</h3>
-              <p>aqui vai ficar um mini textinho</p>
+              <p>JavaScript é uma linguagem de programação que permite a você implementar itens complexos em páginas web,toda vez que uma página da web faz mais do que simplesmente mostrar a você informação estática, mostrando conteúdo que se atualiza em um intervalo de tempo, mapas interativos ou gráficos 2D/3D animados e afins você pode apostar que o JavaScript provavelmente está envolvido.</p>
             </div>
           </div>
         </div>
@@ -140,23 +159,27 @@
       </section>
 
       <!-- Formulário -->
-      <section id="contatos" class="formulario">
-        <div class="interface">
-          <h2 class="titulo">FALE <span>COMIGO.</span></h2>
+<section id="contatos" class="formulario">
+  <div class="interface">
+    <h2 class="titulo">FALE <span>COMIGO.</span></h2>
 
-          <form action="https://formsubmit.co/rcavalcantisantos@gmail.com" method="POST">
-            <input type="text" name="nome" placeholder="Seu nome completo:" required>
-            <input type="email" name="email" placeholder="Seu email:" required>
-            <textarea name="mensagem" placeholder="Sua mensagem" required></textarea>
-            <div class="btn-enviar">
-              <input type="submit" value="ENVIAR">
-            </div>
-          
-            <!-- Configurações extras -->
-            <input type="hidden" name="_next" value="https://robertacs.github.io/Portfolio/">
-            <input type="hidden" name="_captcha" value="false">
-          </form>
-          
+    <form id="form-fale-comigo">
+      <input type="text" name="nome" placeholder="Seu nome completo:" required>
+      <input type="email" name="email" placeholder="Seu email:" required>
+      <textarea name="mensagem" placeholder="Sua mensagem" required></textarea>
+      <div class="btn-enviar">
+        <input type="submit" value="ENVIAR">
+      </div>
+    </form>
+  </div>
+</section>
+
+<script>
+  document.getElementById('form-fale-comigo').addEventListener('submit', function(event) {
+    event.preventDefault(); // Impede o envio real do formulário
+    alert('Este formulário ainda está em desenvolvimento. Em breve será possível enviar mensagens!');
+  });
+</script>
       </section>
     </main>
   </div>

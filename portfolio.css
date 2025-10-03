@@ -3,7 +3,7 @@
     margin:0; padding:0; box-sizing:border-box;
     font-family:"Poppins", sans-serif;
   }
-  body{ background:#e286867d; min-height:100vh; }
+  body{ background:#d48c8c66; min-height:100vh; }
   .interface{ max-width:1280px; margin:0 auto; }
   
   /* MENU */
@@ -19,7 +19,7 @@
   }
   
   .menu-desktop li a:hover{
-    color:#c5629f;
+    color:#c25567;
     transform: scale(1.1);    /* zoom leve */
   }
   
@@ -41,34 +41,92 @@
   /* HEADER */
   header{ padding:40px 4%; }
   
-  /* TOPO */
+/* ---------- TOPO DO SITE ---------- */
+section.topo-do-site {
+  padding: 60px 4%;
+  margin-bottom: 100px;
+}
 
-  .topo-do-site h1 {
-    color:#fff; 
-    font-size:38px; 
-    line-height:40px;
-    transition: transform .3s ease;
+section.topo-do-site .flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/* Imagem à esquerda */
+.img-topo-site {
+  flex: 1;
+  max-width: 400px;
+}
+
+.img-topo-site img {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+  object-fit: cover;
+
+  /* animação flutuante */
+  position: relative;
+  animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+@keyframes flutuar {
+  0% { top: 0; }
+  100% { top: 20px; } /* desce 20px e volta */
+}
+
+/* Texto à direita */
+.txt-topo-site {
+  flex: 2;
+  text-align: justify; /* alinhamento justificado */
+}
+
+.topo-do-site h1 {
+  color: #ffffff;       /* mantém todo o título branco */
+  word-spacing: normal; /* remove espaçamento exagerado */
+  letter-spacing: 0;    /* sem espaço extra entre letras */
+  display: inline-block;
+  text-align: left;
+}
+
+.topo-do-site h1 .destaque {
+  color: #c25567;       /* rosa para o "Olá, mundo!" */
+}
+
+/* Ajuste do espaçamento entre palavras */
+h1 {
+  word-spacing: 4px; /* diminui o espaço padrão (ajuste o valor até ficar ideal) */
+}
+
+.txt-topo-site h1:hover {
+  transform: scale(1.03);
+}
+
+.txt-topo-site p {
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+/* Botão abaixo do texto */
+.txt-topo-site .btn-contato {
+  margin-top: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+  section.topo-do-site .flex {
+    flex-direction: column; /* empilha no mobile */
+    text-align: center;
   }
   
-  .topo-do-site h1:hover {
-    transform: scale(1.03);
+  .txt-topo-site {
+    text-align: center;
   }
-  
-  section.topo-do-site{ padding:40px 4%; margin-bottom:100px; }
-  .txt-topo-site h1 span{ color:#c25567; }
-  .topo-do-site p{ color:#fff; margin:40px 0; }
-  
-  .img-topo-site{ max-width:420px; width:45%; }
-  .img-topo-site img{
-    width:100%; display:block; border-radius:8px; object-fit:cover;
-    position:relative; animation:flutuar 2s ease-in-out infinite alternate;
-  }
-  @keyframes flutuar{ 0%{top:0} 100%{top:30px} }
-  
-  @media (max-width:800px){
-    .img-topo-site{ width:100%; max-width:360px; margin:0 auto; }
-    .txt-topo-site{ width:100%; text-align:center; }
-  }
+}
+
   
   /* ---------- MINHAS HABILIDADES ---------- */
   section.especialidades{ padding:60px 4%; margin-bottom:120px; }
